@@ -11,10 +11,12 @@ class NightWriterTest < Minitest::Test
   def test_can_encode_to_braille
     assert_equal "..0.0.0.0.0......00.0.0.00\n..00.00.0..0....00.0000..0\n.0....0.0.0....0.00.0.0...\n", writer.encode_to_braille("Hello World")
   end
-  #
-  # def test_can_lookup
-  #   assert_equal ".", writer.lookup("a", 4)
-  # end
+
+  def test_can_lookup
+    # assert_equal ".", writer.lookup("a", 4)
+    assert_equal ".", writer.new_lookup("a")
+
+  end
   #
   # def test_postion
   #   assert_equal ".", writer.lookup(:capitalize, 0)
@@ -35,12 +37,12 @@ class NightWriterTest < Minitest::Test
   # def test_decodes_cap_letter
   #   assert_equal "A", writer.encode_from_braille("..0.\n....\n.0..\n")
   # end
-  #
+
   # def test_encodes_message
   #   assert_equal "..0.0.0.0.0........00.0.0.00\n..00.00.0..0......00.0000..0\n.0....0.0.0..0...0.00.0.0...\n", writer.encode_to_braille("Hello World")
   # end
   #
-  def test_decodes_message
-    assert_equal "Hello World",writer.encode_from_braille("..0.0.0.0.0........00.0.0.00\n..00.00.0..0......00.0000..0\n.0....0.0.0..0...0.00.0.0...\n")
-  end
+  # def test_decodes_message
+  #   assert_equal "Hello World",writer.encode_from_braille("..0.0.0.0.0........00.0.0.00\n..00.00.0..0......00.0000..0\n.0....0.0.0..0...0.00.0.0...\n")
+  # end
 end

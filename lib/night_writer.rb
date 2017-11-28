@@ -30,7 +30,6 @@ class NightWriter
     m = 3
     # as_one_line = lines.join
     as_one_line = braille.tr("\n", "")
-    # binding.pry
     output = []
     should_capitalize_next = false
 
