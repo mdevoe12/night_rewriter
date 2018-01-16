@@ -1,3 +1,5 @@
+# test change for push from new dev laptop
+
 class Alphabet
 	attr_reader :braille_letter_hash
 
@@ -41,4 +43,3 @@ class Alphabet
 		}
 	end
 end
-
